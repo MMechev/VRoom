@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/cardview_dark_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MessagesActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_rooms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:layout_gravity="right"
+            android:drawableLeft="@drawable/my_rooms"
+            android:id="@+id/my_rooms"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:hint="Enter new message"
+        android:breakStrategy="balanced"
+        android:id="@+id/new_message"/>
+    <Button
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/send"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:layout_toRightOf="@id/new_message"
+        android:background="@color/cardview_dark_background"
+        android:id="@+id/new_message_button"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/messages_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar_rooms"
+        android:layout_above="@id/new_message">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
