@@ -24,6 +24,6 @@ public class ViewHolderIncomingMessage extends RecyclerView.ViewHolder {
     void bind(Message msg, String username) {
         message.setText(msg.getMessage());
         date.setText(msg.getDate().replace("GMT+02:00", ""));
-        msg_username.setText("u/" + username);
+        msg_username.setText("u/" + msg.getUsername());
     }
 }
